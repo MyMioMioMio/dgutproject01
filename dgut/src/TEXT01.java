@@ -7,7 +7,7 @@ import java.time.*;
 import java.util.*;
 import java.io.*;//测试github同步
 class MyThread implements Runnable {
-    double mile;
+    double mile;//test
     double speed;
     public MyThread(double mile, double speed) {
         this.speed = speed;
