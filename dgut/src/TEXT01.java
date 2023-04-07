@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.time.*;
 import java.util.*;
-import java.io.*;
+import java.io.*;//测试github同步
 class MyThread implements Runnable {
     double mile;
     double speed;
@@ -27,7 +27,11 @@ class MyThread implements Runnable {
             curmile += speed;
             System.out.println(th_name + " " + df.format(curmile));
             if (th_name.equals("r") && df.format(curmile).equals(df.format(600.00))) {
-
+                try {
+                    Thread.sleep(12000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
         System.out.println(th_name + "到达终点!");
