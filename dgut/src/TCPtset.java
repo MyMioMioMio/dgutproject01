@@ -1,6 +1,6 @@
 import java.io.*;
 import java.net.*;
-import java.util.Scanner;
+
 class TCPServer {
     private static final int PORT = 10006;
     public void listen() throws Exception {
@@ -37,13 +37,12 @@ class clientThread implements Runnable {
         }
     }
 }
-public class Test {
+public class TCPtset {
     public static void main(String[] args) throws Exception {
         clientThread run = new clientThread();
         Thread client = new Thread(run);
         client.start();
         TCPServer server = new TCPServer();
         server.listen();
-
     }
 }
